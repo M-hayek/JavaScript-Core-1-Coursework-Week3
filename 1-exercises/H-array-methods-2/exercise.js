@@ -22,7 +22,7 @@ var lastFive = everyone.slice (everyone.length-5 , everyone.length-0); // comple
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 
-// console.log(firstFive);
+console.log(firstFive);
 console.log(lastFive);
 
 /* 
