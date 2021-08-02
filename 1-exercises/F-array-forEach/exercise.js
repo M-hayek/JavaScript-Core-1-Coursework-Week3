@@ -9,22 +9,17 @@
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-/* EXPECTED OUTPUT */
+let newArray =  arr.forEach (checkValue);
 
-/*
-1
-2
-'Fizz'
-4
-'Buzz'
-'Fizz'
-7
-8
-'Fizz'
-'Buzz'
-11
-'Fizz'
-13
-14
-'FizzBuzz'
-*/
+function checkValue (value) {
+ if (value % 3 === 0 && value % 5 === 0 ) {
+   console.log ("FizzBuzz");
+ } else if (value % 5 === 0) {
+  console.log ("Buzz");
+ } else if (value % 3 === 0 ){
+  console.log ("Fizz");
+ } else {
+  console.log (value);
+ }
+
+}
