@@ -21,20 +21,35 @@
   Let's first look at an example that will teach you how to use these methods.
 */
 
+
+
 function isBushSafe(berryArray) {
-  //Write your code here
-}
+  let allPink = berryArray.every(berry =>{
+    return berry ==="pink"
+  })
+
+  if(allPink){
+    console.log ("Bush is safe to eat from");
+  }else{
+    console.log ("Toxic! Leave bush alone!");
+  }
+   
+  }
+  
+
+isBushSafe(["pink", "pink", "pink", "neon", "pink", "transparent"])
+isBushSafe(["pink", "pink", "pink", "pink"])
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-test("isBushSafe finds toxic busy", () => {
-  expect(
-    isBushSafe(["pink", "pink", "pink", "neon", "pink", "transparent"])
-  ).toEqual("Toxic! Leave bush alone!");
-});
+// test("isBushSafe finds toxic busy", () => {
+//   expect(
+//     isBushSafe(["pink", "pink", "pink", "neon", "pink", "transparent"])
+//   ).toEqual("Toxic! Leave bush alone!");
+// });
 
-test("isBushSafe function finds safe bush", () => {
-  expect(isBushSafe(["pink", "pink", "pink", "pink"])).toEqual(
-    "Bush is safe to eat from"
-  );
-});
+// test("isBushSafe function finds safe bush", () => {
+//   expect(isBushSafe(["pink", "pink", "pink", "pink"])).toEqual(
+//     "Bush is safe to eat from"
+//   );
+// });

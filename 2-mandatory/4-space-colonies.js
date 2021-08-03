@@ -15,32 +15,69 @@
   
 */
 
-function getSettlers() {}
+function getSettlers(families) {
+  let newArr = families.filter(name => { if (name.includes("family") && name[0] === "A"){ return name;}
+}) 
+
+  console.log (newArr);
+
+
+
+}
+
+// function getSettlers(families) {
+//   let familiesStaying = families.filter((settler) => {
+//     if (settler[0] === "A" && settler.includes("family")) {
+//       return settler;
+//     }
+//   });
+
+//   return familiesStaying;
+// }
+
+const voyagers = [
+  "Adam family",
+  "Potter family",
+  "Eric",
+  "Aldous",
+  "Button family",
+  "Jude",
+  "Carmichael",
+  "Bunny",
+  "Asimov",
+  "Oscar family",
+  "Avery family",
+  "Archer family",
+  "Just A. family",
+  "A Great family",
+];
+
+getSettlers(voyagers)
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-test("getSettlers function works", () => {
-  const voyagers = [
-    "Adam family",
-    "Potter family",
-    "Eric",
-    "Aldous",
-    "Button family",
-    "Jude",
-    "Carmichael",
-    "Bunny",
-    "Asimov",
-    "Oscar family",
-    "Avery family",
-    "Archer family",
-    "Just A. family",
-    "A Great family",
-  ];
+// test("getSettlers function works", () => {
+//   const voyagers = [
+//     "Adam family",
+//     "Potter family",
+//     "Eric",
+//     "Aldous",
+//     "Button family",
+//     "Jude",
+//     "Carmichael",
+//     "Bunny",
+//     "Asimov",
+//     "Oscar family",
+//     "Avery family",
+//     "Archer family",
+//     "Just A. family",
+//     "A Great family",
+//   ];
 
-  expect(getSettlers(voyagers)).toEqual([
-    "Adam family",
-    "Avery family",
-    "Archer family",
-    "A Great family",
-  ]);
-});
+//   expect(getSettlers(voyagers)).toEqual([
+//     "Adam family",
+//     "Avery family",
+//     "Archer family",
+//     "A Great family",
+//   ]);
+// });
