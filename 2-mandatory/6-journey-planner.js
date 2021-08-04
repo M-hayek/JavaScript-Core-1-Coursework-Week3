@@ -30,7 +30,7 @@ const string1 = "I Love coding and perfect code makes me happy";
 const string2 = "I don't like to do coding";
 const string3 = "Can you scan the barcode for me";
 
-checkCodeIsThere(string3);
+checkCodeIsThere(string1);
 
 /*
   I am new to London and would like to know what transport I can take to different famous locations.
@@ -70,12 +70,12 @@ checkCodeIsThere(string3);
   Hint: Use the corresponding array method to split the array.
 */
 function getTransportModes(arr) {
-  let transArr= arr.shift();
- return transArr;
+
+ return arr.shift();
 
 }
 
-getTransportModes(["Angel", "tube", "bus"];
+console.log (getTransportModes(["Angel", "tube", "bus"]));
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -92,8 +92,13 @@ getTransportModes(["Angel", "tube", "bus"];
     
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-// function isAccessibleByTransportMode() {}
+function isAccessibleByTransportMode(transModes, singleTransMode) {
 
+return transModes.includes(singleTransMode);
+  
+}
+
+console.log (isAccessibleByTransportMode(["tube", "bus"], "river boat"));
 
 /*
   Implement the function getLocationName that
@@ -104,7 +109,13 @@ getTransportModes(["Angel", "tube", "bus"];
    - Returns the name of the location
       e.g: "Tower Bridge"
 */
-// function getLocationName() {}
+function getLocationName(arr) {
+
+  return arr[0];
+
+}
+
+console.log (getLocationName(["London Bridge", "tube", "river boat"]));
 
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
@@ -133,9 +144,20 @@ getTransportModes(["Angel", "tube", "bus"];
    
   Advanced challange: try to use arrow function when invoking an array method.
 */
-// function journeyPlanner(locations, transportMode) {
+function journeyPlanner(locations, transportMode) {
+
   // Implement the function body
-// }
+  let newArr=  getTransportModes(locations);
+
+  If (isAccessibleByTransportMode(newArr,transportMode)) {
+
+    console.log (locations[0]);
+
+  } 
+
+ }
+
+ journeyPlanner(["Angel", "tube", "bus"], "tube");
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
